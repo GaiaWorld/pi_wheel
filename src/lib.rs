@@ -1,8 +1,6 @@
 //! 全部采用常量泛型的多层定时轮
 //! 常量泛型依次为 首层轮的槽数量, 后面层的轮内槽的数量, 轮的层数
 
-#![feature(maybe_uninit_ref)]
-
 use std::{cmp::Ordering, fmt, mem::MaybeUninit};
 
 pub struct Wheel<T, const N0: usize, const N: usize, const L: usize> {
